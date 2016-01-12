@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta charset="utf-8">
+    <title>${title}</title>
+    <link rel='stylesheet' href='vendor/bootstrap.css'>
+    <link rel="stylesheet" href="vendor/jquery-ui.css"/>
+    <link rel='stylesheet' href='vendor/select2/select2.css'>
+    <link rel='stylesheet' href='vendor/select2/select2-bootstrap.css'>
+    <link rel="stylesheet" href="../common/styles/splash-screen.css"/>
+    <link rel='stylesheet' href='../common/main.css'>
+    <link rel='stylesheet' href='../common/styles/popup.css'>
+    <link rel='stylesheet' href='styles/main.css'>
+    <link rel='stylesheet' href='styles/custom.css'>
+
+    <script src="vendor/jquery-1.10.2.min.js"></script>
+    <script src="vendor/jquery-ui.js"></script>
+    <script src="vendor/jquery.alterclass.js"></script>
+    <script src="vendor/underscore.js"></script>
+    <script src="vendor/d3.v3.min.js"></script>
+    <script src="vendor/d3.layout.js"></script>
+    <script src="vendor/d3.wordwrap.js"></script>
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="../common/scripts/utils.js"></script>
+    <script src="../common/vendor/scripts/spin.js"></script>
+    <script src="../common/scripts/extend.js"></script>
+    <script src="../common/scripts/popup.js"></script>
+    <script src="../common/scripts/payload-popup.js"></script>
+    <script src="../common/scripts/link-resolver.js"></script>
+    <script src="../common/scripts/multiselect.js"></script>
+    <script src="../common/scripts/slider.js"></script>
+    <script src="../common/scripts/splash-screen.js"></script>
+    <script src="../common/scripts/settings-service.js"></script>
+    <script src="scripts/main.js"></script>
+</head>
+
+<body class="theme">
+<div class="chart-container">
+    <div class="controls-container">
+        <div class="theme-selector">
+            <select id="theme_selector" class="regularSelect2">
+                <option value="theme-light" selected>Light</option>
+                <option value="theme-dark">Dark</option>
+            </select>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn btn-default direction active" data-type="left-to-right">Left to right</button>
+            <button class="btn btn-default direction" data-type="right-to-left">Right to left</button>
+        </div>
+        <div class="control">
+            <div class="control-title">Node size</div>
+            <div id="slider_nodesize" class="slider"></div>
+        </div>
+        <div class="control">
+            <div class="control-title">Node Spacing</div>
+            <div id="slider_nodespacing" class="slider"></div>
+        </div>
+        <div class="control">
+            <div class="control-title">Font Size</div>
+            <div id="slider_fontsize" class="slider"></div>
+        </div>
+        <div class="control">
+            <div class="control-title">Line Width</div>
+            <div id="slider_widthMinMax" class="slider"></div>
+        </div>
+        <div class="control">
+            <select id="layout_selector" class="layoutSelector regularSelect2" style="width: 150px; ">
+                <option value="dominant" >Dominant Paths</option>
+                <option value="allpaths">All Paths</option>
+                <option value="collapsed">All Collapsed</option>
+                <option value="custom">Custom</option>
+            </select>
+        </div>
+    </div>
+
+    <div style="height: 100%; position: relative">
+        <div style="position: absolute; top: 40px; bottom: 30px;" id="chart"></div>
+    </div>
+</div>
+
+<div id="message-no-data">There was no valid data to generate visualization.</div>
+
+<img class="logo" src="images/logo-teradata.png">
+</body>
+</html>

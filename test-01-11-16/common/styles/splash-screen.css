@@ -1,0 +1,7 @@
+/*
+Unpublished work.
+Copyright (c) 2014-2015 by Teradata Corporation. All rights reserved.
+TERADATA CORPORATION CONFIDENTIAL AND TRADE SECRET
+*/
+
+.splash-screen{position:fixed;top:0;bottom:0;right:0;left:0;background:#fff;display:flex;flex-direction:column;z-index:1000;}.splash-screen .content-container{margin:auto;padding-bottom:100px;}.splash-screen .spinner-container{position:relative;display:block;margin:0 auto 30px auto;height:128px;width:128px;}.splash-screen .message{font-size:24px;color:#000;}
