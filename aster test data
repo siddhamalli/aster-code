@@ -2,13 +2,25 @@ This is the test data
 
 create table weblog (path varchar,cnt int) distribute by replication;
 insert into weblog values ('[clothing]',448);
-insert into weblog values ('[handbags],425);
-insert into weblog values ('[clothing, clothing],339);
-insert into weblog values ('[shoes],321););
-insert into weblog values ('[clothing, clothing, clothing, clothing],315);
-insert into weblog values ('[clothing, clothing, clothing],301);
-insert into weblog values ('[handbags, handbags],295);
-insert into weblog values ('[shoes, shoes, shoes, shoes, shoes],284);
-insert into weblog values ('[clothing, clothing, clothing, clothing, clothing],279);
-insert into weblog values ('[clothing, clothing, clothing, clothing, clothing, clothing],271);
+insert into weblog values ('[handbags]',425);
+insert into weblog values ('[clothing, clothing]',339);
+insert into weblog values ('[shoes]',321););
+insert into weblog values ('[clothing, clothing, clothing, clothing]',315);
+insert into weblog values ('[clothing, clothing, clothing]',301);
+insert into weblog values ('[handbags, handbags]',295);
+insert into weblog values ('[shoes, shoes, shoes, shoes, shoes]',284);
+insert into weblog values ('[clothing, clothing, clothing, clothing, clothing]',279);
+insert into weblog values ('[clothing, clothing, clothing, clothing, clothing, clothing]',271);
 
+Viz code
+
+INSERT INTO app_center_visualizations  (json) 
+SELECT json FROM Visualizer (
+ON "weblog" PARTITION BY 1 
+AsterFunction('npath') 
+Title('test') 
+VizType('tree')
+);
+
+What is happening is in the opriginal dtree itself when we run this the code because of the size of node the screen looks
+the same as what you are showing , we want you to try or from your experience how does will this look will it be normal .
