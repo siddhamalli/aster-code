@@ -1,10 +1,14 @@
-[clothing],448
-[handbags],425
-[clothing, clothing],339
-[shoes],321
-[clothing, clothing, clothing, clothing],315
-[clothing, clothing, clothing],301
-[handbags, handbags],295
-[shoes, shoes, shoes, shoes, shoes],284
-[clothing, clothing, clothing, clothing, clothing],279
-[clothing, clothing, clothing, clothing, clothing, clothing],271
+This is the test data 
+
+create table weblog (path varchar,cnt int) distribute by replication;
+insert into weblog values ('[clothing]',448);
+insert into weblog values ('[handbags],425);
+insert into weblog values ('[clothing, clothing],339);
+insert into weblog values ('[shoes],321););
+insert into weblog values ('[clothing, clothing, clothing, clothing],315);
+insert into weblog values ('[clothing, clothing, clothing],301);
+insert into weblog values ('[handbags, handbags],295);
+insert into weblog values ('[shoes, shoes, shoes, shoes, shoes],284);
+insert into weblog values ('[clothing, clothing, clothing, clothing, clothing],279);
+insert into weblog values ('[clothing, clothing, clothing, clothing, clothing, clothing],271);
+
